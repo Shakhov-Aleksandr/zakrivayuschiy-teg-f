@@ -1,10 +1,7 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-    --wdth: 100;
+    --wght: 100;
     --main-font: "Inter-Variable";
     --accent-font: "PressStart2P-Regular";
 }
 
-.text_weight_bold {
-    --wght: 900;
-}
