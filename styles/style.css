@@ -18,8 +18,13 @@
   --wght: 400;
 }
 
+.content {
+  inline-size: 100vw;
+}
+
 .page {
   background: url(../images/background.png) no-repeat center / cover;
+  background-image: repeating-linear-gradient(90deg, #d3d3d3, transparent 2px);
   background-color: #fff;
   background-attachment: fixed;
   min-inline-size: 320px;
@@ -63,12 +68,16 @@ font-weight: 900;
 }
 
 .card {
-  border: 2px solid #000;
   background-color: #fff;
   inline-size: 100%;
 }
 
 .card__title {
+  border-left: 2px solid #000;
+  border-right: 2px solid #000;
+  border-top: 2px solid #000;
+
+
   padding-inline: 10px;
   padding-block: 4px;
   font-size: 18px;
@@ -103,6 +112,13 @@ font-weight: 900;
     0 -1px #fff;
 }
 
+.card__content {
+  border-left: 2px solid #000;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+
 @supports((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
   .card__pictire-label {
     -webkit-text-stroke: .08em rgb(256 256 256 / .5);
@@ -113,7 +129,7 @@ font-weight: 900;
 
 .card__content {
   font-variation-settings: 'wght' var(--wght);
-  line-height: 1.181em;
+  line-height: 1.179em;
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -127,16 +143,77 @@ font-weight: 900;
   align-items: center;
   gap: 12px;
   align-self: end;
-  font-family: var(--accent-font, "Open Sans");
   background-color: transparent;
-  font-size: 14px;
 }
 
 .button__text {
+  font-family: var(--accent-font, "Open Sans");
+  font-size: 14px;
+  background-color: #fff;
+}
+
+.like-icon + .button__text {
   padding-inline: 35px;
   padding-block: 10px;
   border: 2px solid #000;
 }
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding-block: 52px 100px;
+}
+
+.memory-button  {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  gap: 8px;
+  flex-direction: column;
+  padding-inline: 20px;
+  padding-block: 15px;
+}
+
+.memory-dialog {
+  border: 2px solid #000;
+  padding: 30px;
+  text-transform: uppercase;
+  font-family: var(--accent-font, "Open Sans");
+  font-size: 14px;
+  position: fixed;
+  text-align: center;
+  inset-inline-start: 0;
+  inset-block-end: 0;
+}
+
+.memory-dialog:not([open]) {
+  pointer-events: none;
+}
+
+.memory-dialog[open] {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.dialog-content {
+  align-items: center;
+  line-height: 150%;
+  gap: 20px;
+  display: flex;
+  text-align: start;
+}
+
+.dialog--btn-close {
+  line-height: 90%;
+  text-transform: uppercase;
+  padding: 11px 112px;
+}
+
+.memory-dialog[open]::backdrop {
+ backdrop-filter: brightness(25%);
+}
+
 
 @supports (font-variation-settings: normal) {
 

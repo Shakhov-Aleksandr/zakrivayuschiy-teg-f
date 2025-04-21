@@ -50,7 +50,7 @@
                 Место для ваших воспоминаний о начале обучения.
               </p>
               <button class="card__like-button">
-                <svg width="33" height="36" viewBox="0 0 33 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="like-icon" width="33" height="36" viewBox="0 0 33 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 6H9V9H12V6Z" fill="black"/>
                   <path d="M15 6H12V9H15V6Z" fill="black"/>
                   <path d="M9 9H6V12H9V9Z" fill="black"/>
@@ -98,7 +98,7 @@
                 Место для ваших воспоминаний о начале первого спринта.
               </p>
               <button class="card__like-button">
-                <svg width="33" height="36" viewBox="0 0 33 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="like-icon" width="33" height="36" viewBox="0 0 33 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 6H9V9H12V6Z" fill="black"/>
                   <path d="M15 6H12V9H15V6Z" fill="black"/>
                   <path d="M9 9H6V12H9V9Z" fill="black"/>
@@ -143,7 +143,7 @@
                 Место для ваших воспоминаний об окончании первого спринта.
               </p>
               <button class="card__like-button">
-                <svg width="33" height="36" viewBox="0 0 33 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="like-icon" width="33" height="36" viewBox="0 0 33 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 6H9V9H12V6Z" fill="black"/>
                   <path d="M15 6H12V9H15V6Z" fill="black"/>
                   <path d="M9 9H6V12H9V9Z" fill="black"/>
@@ -190,7 +190,7 @@
                 Место для ваших воспоминаний о начале второго спринта.
               </p>
               <button class="card__like-button">
-                <svg width="33" height="36" viewBox="0 0 33 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="like-icon" width="33" height="36" viewBox="0 0 33 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 6H9V9H12V6Z" fill="black"/>
                   <path d="M15 6H12V9H15V6Z" fill="black"/>
                   <path d="M9 9H6V12H9V9Z" fill="black"/>
@@ -239,7 +239,7 @@
                 Место для ваших воспоминаний об окончании второго спринта.
               </p>
               <button class="card__like-button">
-                <svg width="33" height="36" viewBox="0 0 33 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="like-icon" width="33" height="36" viewBox="0 0 33 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 6H9V9H12V6Z" fill="black"/>
                   <path d="M15 6H12V9H15V6Z" fill="black"/>
                   <path d="M9 9H6V12H9V9Z" fill="black"/>
@@ -285,7 +285,7 @@
                 Место для ваших воспоминаний о начале третьего спринта.
               </p>
               <button class="card__like-button">
-                <svg width="33" height="36" viewBox="0 0 33 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="like-icon" width="33" height="36" viewBox="0 0 33 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 6H9V9H12V6Z" fill="black"/>
                   <path d="M15 6H12V9H15V6Z" fill="black"/>
                   <path d="M9 9H6V12H9V9Z" fill="black"/>
@@ -332,7 +332,7 @@
                 Место для ваших воспоминаний об окончании третьего спринта.
               </p>
               <button class="card__like-button">
-                <svg width="33" height="36" viewBox="0 0 33 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="like-icon" width="33" height="36" viewBox="0 0 33 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 6H9V9H12V6Z" fill="black"/>
                   <path d="M15 6H12V9H15V6Z" fill="black"/>
                   <path d="M9 9H6V12H9V9Z" fill="black"/>
@@ -382,7 +382,7 @@
                 вы чувствуете в этой точке пути.
               </p>
               <button class="card__like-button">
-                <svg width="33" height="36" viewBox="0 0 33 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="like-icon" width="33" height="36" viewBox="0 0 33 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 6H9V9H12V6Z" fill="black"/>
                   <path d="M15 6H12V9H15V6Z" fill="black"/>
                   <path d="M9 9H6V12H9V9Z" fill="black"/>
@@ -411,8 +411,34 @@
         </li>
       </ul>
       <footer class="footer">
-        <span class="button__text">Сохранить на память</span>
+        <button 
+          type="button" 
+          class="memory-button"
+          onclick="window['memory-dialog-id'].showModal()"
+          >
+          <svg width="28" height="28" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <use href="./svg/icons.svg#floppy"></use>
+          </svg>
+          <span class="button__text">Сохранить на память</span>  
+        </button>
       </footer>
+      <dialog id="memory-dialog-id" class="memory-dialog">
+        <div class="dialog-content">
+          <svg width="94" height="45" viewBox="0 0 39 39" xmlns="http://www.w3.org/2000/svg">
+            <use href="./svg/icons.svg#floppy"></use>
+          </svg>
+          <p>
+            Вставьте дискету, чтобы продолжить
+          </p>
+        </div>
+        <button 
+        type="button" 
+        class="dialog--btn-close button__text"
+        onclick="window['memory-dialog-id'].close()"
+        >
+          Ок
+        </button>
+      </dialog>
     </main>
     <script src="./scripts/like.js"></script>
   </body>
