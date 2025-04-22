@@ -3,6 +3,12 @@
     --wght: 100;
     --main-font: "Inter-Variable";
     --accent-font: "PressStart2P-Regular";
+    --accent-color: #000;
 
+
+    --heart--contour-color: black;
+    --heart--core-color:white ;
+    --heart--main-body-color: #FF0000;
+    --heart--sparks-color: #FF0000;
 }
 
