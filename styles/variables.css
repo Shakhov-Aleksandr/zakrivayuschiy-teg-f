@@ -4,11 +4,13 @@
     --main-font: "Inter-Variable";
     --accent-font: "PressStart2P-Regular";
     --accent-color: #000;
+    --hidden-color: #fff;
 
 
-    --heart--contour-color: black;
-    --heart--core-color:white ;
-    --heart--main-body-color: #FF0000;
-    --heart--sparks-color: #FF0000;
+    --heart--animation-color: red;
+    --heart--contour-color: var(--accent-color);
+    --heart--core-color: white;
+    --heart--main-body-color: var(--heart--animation-color);
+    --heart--sparks-color: var(--heart--animation-color);
 }
 
