@@ -140,8 +140,8 @@
   mix-blend-mode: normal;
   font-family: var(--accent-font, "PressStart2P"), 'fantasy', sans-serif;
   font-size: 14px;
-  inset-inline-end: 13px;
-  inset-block-start: 25px;
+  inset-inline-end: 25px;
+  inset-block-start: 24px;
   text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
 }
 
@@ -196,8 +196,16 @@
   position: relative;
 }
 
-.core,
-.main-body,
+.core {
+  fill: transparent;
+  transition: fill 0.3s 0.03s linear;
+}
+
+.main-body {
+  transition: fill 0.3s 0s linear;
+  fill: transparent;
+}
+
 .sparks {
   fill: transparent;
 }
@@ -211,15 +219,17 @@
 
 .like-icon:hover .core {
   fill: var(--accent-color);
+  transition: fill 0.3s 0s linear;
 }
 
 .like-icon:hover .main-body {
   fill: var(--accent-color);
-  transition-delay: 0.05s;
+  transition: fill 0.3s 0.05s linear;
 }
 
 .like-icon:active .core {
   fill: var(--heart--animation-color);
+  transition-delay: 0.03s;
 }
 
 .like-icon:active .main-body {
@@ -229,6 +239,7 @@
 
 .like-icon.is-liked .core {
   fill: var(--heart--animation-color);
+  transition-delay: 0.03s;
 }
 
 .like-icon.is-liked .main-body {
@@ -388,6 +399,11 @@
     gap: 48px;
   }
 
+  .card__pictire-label {
+    inset-inline-end: 13px;
+    inset-block-start: 25px;
+  }
+  
   .memory-dialog {
     padding-inline: 40px;
   }
