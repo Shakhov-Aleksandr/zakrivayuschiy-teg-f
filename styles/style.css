@@ -229,7 +229,7 @@
 
 .like-icon:active .core {
   fill: var(--heart--animation-color);
-  transition-delay: 0.03s;
+  transition-delay: 0s;
 }
 
 .like-icon:active .main-body {
@@ -239,7 +239,7 @@
 
 .like-icon.is-liked .core {
   fill: var(--heart--animation-color);
-  transition-delay: 0.03s;
+  transition-delay: 0s;
 }
 
 .like-icon.is-liked .main-body {
